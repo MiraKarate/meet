@@ -6,8 +6,8 @@ Calendar API to fetch upcoming events.
 
 Serverless and PWAs have grown in popularity over the last few years, and they’re both considered to be the future of web development. By combining these two concepts, the app will not only work as a normal web application, but it will also reap the benefits of both serverless architecture and PWAs:  
   
-> Serverless: No backend maintenance, easy to scale, always available, no cost for idle time.  
-> PWAs: Instant loading, offline support, push notifications, “add to home screen” prompt,responsive design, and cross-platform compatibility.
++ Serverless: No backend maintenance, easy to scale, always available, no cost for idle time.  
++ PWAs: Instant loading, offline support, push notifications, “add to home screen” prompt,responsive design, and cross-platform compatibility.
 
 **In the context of the app, serverless functions will be used in the following ways:**  
   
