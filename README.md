@@ -4,6 +4,20 @@ This is a serverless, progressive web application (PWA) with React using a
 test-driven development (TDD) technique. The application uses the Google
 Calendar API to fetch upcoming events.
 
+Serverless and PWAs have grown in popularity over the last few years, and they’re both considered to be the future of web development. By combining these two concepts, the app will not only work as a normal web application, but it will also reap the benefits of both serverless architecture and PWAs:  
+  
+> Serverless: No backend maintenance, easy to scale, always available, no cost for idle time.  
+> PWAs: Instant loading, offline support, push notifications, “add to home screen” prompt,responsive design, and cross-platform compatibility.
+
+**In the context of the app, serverless functions will be used in the following ways:**  
+  
+**User authentication:** Serverless functions can handle the authentication logic for this app. When a user logs in or signs up, the serverless function can handle the authentication process, validate user credentials, and generate authentication tokens for subsequent requests.  
+  
+**Event search and retrieval:** When a user searches for events in a specific city, a serverless function can be invoked to retrieve event data from a database or external API. The function can process the user's search query, fetch the relevant event data, and return the results to the client-side application.  
+  
+**Data visualization:** Serverless functions can also be used to process and prepare the data for visualization. When retrieving event data, a serverless function can aggregate and transform the data to a suitable format for the scatterplot and pie chart. This function can perform calculations, filtering, and grouping of data before sending it to the frontend for visualization.  
+
+
 # Key Features 
 
 ## Feature 1: Filter Events by City
