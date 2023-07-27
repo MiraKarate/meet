@@ -34,14 +34,14 @@ So that I can see more/less information about an event.
 
 ### Scenarios using the Gherkin (“Given-When-Then”) syntax
 
-**Scenario 1: Show Event Details**  
-**Given** I am on the event page as a user **When** I click on an event **Then** the event details should be displayed
+**Scenario 1: An event element is collapsed by default**  
+**Given** the user didn't click on event details **When** the user clicks on the “Show details“ button **Then**the details of the clicked event should be seen
 
-**Scenraio 2: Hide Event Details**  
-**Given** I am viewing the event details as a user **When** I click on the "Hide Details" button **Then** the event details should be hidden
+**Scenario 2: User can expand an event to see its details**  
+**Given** the main page is open **When** I click on another event **Then** the details of the previous event should be hidden, and the details of the new event should be displayed  
 
-**Scenario 3: Toggle Event Details**  
-**Given** I am on the event page as a user and the event details are displayed **When** I click on another event **Then** the details of the previous event should be hidden, and the details of the new event should be displayed
+**Scenraio 3: The user can collapse an event to hide its details**  
+**Given** the user used the “Show details“ button **When** the user click on the “Hide details“ button **Then**  the event's details should be hidden again
 
 
 ## Feature 3: Specify Number of Events
@@ -54,13 +54,10 @@ So that I can see more or fewer events in the events list at once.
 ### Scenarios using the Gherkin (“Given-When-Then”) syntax
 
 **Scenario 1: When user hasn’t specified a number, 32 is the default number**  
-**Given** the user has not specified a number of events in a city to display **When** the user selects a city in which to view events **Then** the default number will be 32
+**Given** the main page is open **When** the user doesn't specify the number of events visible **Then** the default number will be 32
 
-**Scenario 2: Decrease Number of Events to Show**  
-**Given** the app shows 32 events by default **When** the user wants the number of events to view to 10 **Then** the app should display the events list with a maximum of 10 events at once
-
-**Scenario 3: Increase Number of Events to Show**  
-**Given** I am a user on the app settings page and the number of events to view is set to 10 **When** I increase the number of events to view to 3 **Then** the app should display the events list with a maximum of 3 events at once
+**Scenario 2: User can change the number of events they want to see**  
+**Given** the main page is open **When** the user specifies the number of events visible **Then** the user should be able to see events equal to the given number at once
 
 ## Feature 4: Use the App When Offline.
 
