@@ -4,19 +4,28 @@ import NumberOfEvents from '../components/NumberOfEvents';
 
 describe('<NumberOfEvents/> component', () => {
   test('renders the NumberOfEvents component correctly', () => {
-    const { container } = render(<NumberOfEvents setCurrentNOE={() => { }} />);
+    const { container } = render(<NumberOfEvents 
+      setCurrentNOE={() => { }} 
+      setErrorAlert={() => { }}
+      />);
     const NumberOfEventsComponent = container.querySelector('#number-of-events');
     expect(NumberOfEventsComponent).toBeInTheDocument();
   });
 
   test('contains an element with the role of the textbox', () => {
-    render(<NumberOfEvents setCurrentNOE={() => { }} />);
+    render(<NumberOfEvents 
+      setCurrentNOE={() => { }} 
+      setErrorAlert={() => { }}
+      />);
     const textBoxElement = screen.getByRole('textbox');
     expect(textBoxElement).toBeInTheDocument();
   });
 
   test('has a default input value of 32', () => {
-    render(<NumberOfEvents setCurrentNOE={() => { }} />);
+    render(<NumberOfEvents 
+      setCurrentNOE={() => { }} 
+      setErrorAlert={() => { }}
+      />);
     const textBoxElement = screen.getByRole('textbox');
     expect(textBoxElement.value).toBe('32');
   });
@@ -27,7 +36,10 @@ describe('<NumberOfEvents/> component', () => {
       numEvents = value;
     };
 
-    render(<NumberOfEvents setCurrentNOE={handleUpdateEvents} />);
+    render(<NumberOfEvents 
+      setCurrentNOE={handleUpdateEvents} 
+      setErrorAlert={() => { }}
+      />);
     const textBoxElement = screen.getByRole('textbox');
 
     // Trigger a change event and update the value to '10'
