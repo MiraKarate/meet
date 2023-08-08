@@ -10,7 +10,7 @@ import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 
 import './App.css';
 
-const App = () => {
+export const App = () => {
   const [events, setEvents] = useState([]);
   const [currentNOE, setCurrentNOE] = useState(32);
   const [allLocations, setAllLocations] = useState([]);
@@ -19,15 +19,6 @@ const App = () => {
   const [errorAlert, setErrorAlert] = useState ("");
   const [warningAlert, setWarningAlert] = useState ("");
 
-  useEffect(() => {
-    if (navigator.onLine) {
-      setWarningAlert("")
-    } else {
-      setWarningAlert("The application is currently offline")
-    }
-    fetchData();
-  }, [currentCity, currentNOE ]); // Add currentNOE to the dependency array??
-
   const fetchData = async () => {
     const allEvents = await getEvents();
     const filteredEvents = currentCity === "See all cities" ?
@@ -35,7 +26,18 @@ const App = () => {
     allEvents.filter(event => event.location === currentCity)
     setEvents(filteredEvents.slice(0, currentNOE));
     setAllLocations(extractLocations(allEvents));
-  };
+  }
+
+  useEffect(() => {
+    if (navigator.onLine) {
+      setWarningAlert("")
+    } else {
+      setWarningAlert("The application is currently offline")
+    }
+    fetchData();
+  }, [currentCity, currentNOE, navigator.onLine]); // Add currentNOE to the dependency array??
+
+  
 
   return (
     <div className="App">
@@ -47,7 +49,7 @@ const App = () => {
       </div>
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} setInfoAlert={setInfoAlert}/>
       <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
-      <EventList events={events} /> {/* Pass the events state to the EventList component */}
+      <EventList events={events} currentNOE={currentNOE}/> {/* Pass the events state to the EventList component */}
       
     </div>
   );
