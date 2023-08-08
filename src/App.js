@@ -35,7 +35,7 @@ export const App = () => {
       setWarningAlert("The application is currently offline")
     }
     fetchData();
-  }, [currentCity, currentNOE, navigator.onLine]); // Add currentNOE to the dependency array??
+  }, [currentCity, currentNOE, navigator.onLine, fetchData]); // Add currentNOE to the dependency array??
 
   
 
