@@ -35,7 +35,7 @@ export const App = () => {
       setWarningAlert("The application is currently offline")
     }
     fetchData();
-  }, [currentCity, currentNOE, navigator.onLine, fetchData]); // Add currentNOE to the dependency array??
+  }, [currentCity, currentNOE ]); // Add currentNOE to the dependency array??
 
   
 
@@ -49,7 +49,7 @@ export const App = () => {
       </div>
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} setInfoAlert={setInfoAlert}/>
       <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
-      <EventList events={events} currentNOE={currentNOE}/> {/* Pass the events state to the EventList component */}
+      <EventList events={events} /> 
       
     </div>
   );
