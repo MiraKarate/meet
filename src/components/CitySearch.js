@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
+export const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
 
   useEffect(() => {
     setSuggestions(allLocations);
