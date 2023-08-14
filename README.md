@@ -8,31 +8,31 @@ Calendar API to fetch upcoming events. The serverless provider chosen for this p
 
 The Meet App seamlessly integrates a range of innovative technologies and tools:
 
-## React (with create-react-app): 
+**React (with create-react-app):**
 The app's foundation is built on React, facilitating the creation of dynamic and interactive user interfaces.
 
-## Serverless Architecture with AWS Lambda: 
+**Serverless Architecture with AWS Lambda:** 
 Embracing serverless functions, particularly AWS Lambda, the app handles backend functionalities and authorization. This choice of architecture emphasizes scalability and streamlines maintenance tasks.
 
-## Google Calendar API Integration: 
+**Google Calendar API Integration:** 
 The Meet App seamlessly integrates the Google Calendar API, employing OAuth2 authentication for secure access to upcoming events. This integration ensures that users receive accurate and real-time event data.
 
-## Test-Driven Development (TDD): 
+**Test-Driven Development (TDD):** 
 Jest and the Testing Library for React are employed for a comprehensive TDD approach, ensuring code reliability and functionality.
 
-## Behavior-Driven Development (BDD): 
+**Behavior-Driven Development (BDD):** 
 Jest-cucumber and Puppeteer facilitate behavior-driven development, enhancing collaboration and feature validation.
 
-## Continuous Integration & Continuous Delivery: 
+**Continuous Integration & Continuous Delivery:** 
 The app embraces a CI/CD pipeline, automating deployment and ensuring code integrity throughout development.
 
-## Atatus: 
+**Atatus**
 Atatus is leveraged for effective monitoring of the app's performance, safeguarding optimal user experiences.
 
-## Recharts: 
+**Recharts:** 
 Data visualization is powered by Recharts, enabling the creation of insightful scatterplots and engaging pie charts.
 
-## Effective Version Control with Git & GitHub: 
+**Effective Version Control with Git & GitHub:** 
 The app's codebase is securely hosted on GitHub, allowing collaborative development and ensuring version control. This fosters a cohesive and organized development process.  
 
 # Key Features 
