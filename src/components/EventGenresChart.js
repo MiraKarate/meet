@@ -6,6 +6,8 @@ import { ResponsiveContainer, PieChart, Pie, Legend, Cell } from 'recharts';
 const EventGenresChart = ({ events }) => {
     const [data, setData] = useState ([]);
     const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'Angular'];
+    const colors = ['#1911bf', '#cc8f45', '#84abba', '#82ba5f', '#255322']
+
 
     useEffect(() => {
         setData(getData());
@@ -33,7 +35,7 @@ const EventGenresChart = ({ events }) => {
           <text
             x={x}
             y={y}
-            fill="#8884d8"
+            fill="#000000"
             textAnchor={x > cx ? 'start' : 'end'}
             dominantBaseline="central"
           >
@@ -46,14 +48,34 @@ const EventGenresChart = ({ events }) => {
     return (
         <ResponsiveContainer width="99%" height={400}>
           <PieChart>
-            <Pie
-              data={data}
-              dataKey="value"
-              fill="#8884d8"
-              labelLine={false}
-              label={renderCustomizedLabel}
-              outerRadius={150}           
-            />
+          <Pie
+                    data={data}
+                    dataKey="value"
+                    outerRadius="80%"
+                    labelLine={false}
+                    label={renderCustomizedLabel}
+                    fill="#353187"
+                >
+                    {
+                        data.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={colors[index]} />
+                        ))
+                    }
+                </Pie>
+                {
+                    data.map((entry, index) => (
+                        <Legend 
+                            key={`legend-${index}`} 
+                            verticalAlign="bottom" 
+                            align="bottom"
+                            wrapperStyle={{
+                                WebkitTextStroke: `1px`,
+                                background: 'rgba(255, 255, 255, 0.5',
+                                textShadow: '0px, 0px, 10px rgba(255, 255, 255, 1)'
+                            }}
+                        />
+                    ))
+                }
           </PieChart>
         </ResponsiveContainer>
       );
