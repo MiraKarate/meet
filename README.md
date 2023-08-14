@@ -26,7 +26,7 @@ Jest-cucumber and Puppeteer facilitate behavior-driven development, enhancing co
 **Continuous Integration & Continuous Delivery:** 
 The app embraces a CI/CD pipeline, automating deployment and ensuring code integrity throughout development.
 
-**Atatus**
+**Atatus:**
 Atatus is leveraged for effective monitoring of the app's performance, safeguarding optimal user experiences.
 
 **Recharts:** 
