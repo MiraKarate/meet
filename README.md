@@ -1,143 +1,126 @@
 # Meet App
 
-This is a serverless, progressive web application (PWA) with React using a
-test-driven development (TDD) technique. The application uses the Google
-Calendar API to fetch upcoming events. The serverless provider chosen for this purpose is Amazon Web Services.
+## Description
 
-# Technologies & Tools Used  
+Meet App is a serverless, progressive web application (PWA) developed using React, utilizing test-driven development (TDD) techniques. It leverages the Google Calendar API to fetch upcoming events and is hosted on Amazon Web Services (AWS) using a serverless architecture.
 
-The Meet App seamlessly integrates a range of innovative technologies and tools:
+## Technologies & Tools Used
 
-**React (with create-react-app):**
-The app's foundation is built on React, facilitating the creation of dynamic and interactive user interfaces.
+Meet App integrates various innovative technologies and tools, including:
 
-**Serverless Architecture with AWS Lambda:** 
-Embracing serverless functions, particularly AWS Lambda, the app handles backend functionalities and authorization. This choice of architecture emphasizes scalability and streamlines maintenance tasks.
+- **React (with create-react-app)**: The foundation of the application, enabling dynamic and interactive user interfaces.
 
-**Google Calendar API Integration:** 
-The Meet App seamlessly integrates the Google Calendar API, employing OAuth2 authentication for secure access to upcoming events. This integration ensures that users receive accurate and real-time event data.
+- **Serverless Architecture with AWS Lambda**: Backend functions and authorization are handled through AWS Lambda, emphasizing scalability and simplified maintenance.
 
-**Test-Driven Development (TDD):** 
-Jest and the Testing Library for React are employed for a comprehensive TDD approach, ensuring code reliability and functionality.
+- **Google Calendar API Integration**: Secure access to real-time event data is achieved through integration with the Google Calendar API, utilizing OAuth2 authentication.
 
-**Behavior-Driven Development (BDD):** 
-Jest-cucumber and Puppeteer facilitate behavior-driven development, enhancing collaboration and feature validation.
+- **TDD: Test-driven development (Jest, Testing Library/React)**: Ensuring code reliability and functionality through comprehensive testing.
 
-**Continuous Integration & Continuous Delivery:** 
-The app embraces a CI/CD pipeline, automating deployment and ensuring code integrity throughout development.
+- **BDD: Behavior-driven development (Jest-cucumber, Puppeteer)**: Facilitating collaboration and feature validation with behavior-driven development.
 
-**Atatus:**
-Atatus is leveraged for effective monitoring of the app's performance, safeguarding optimal user experiences.
+- **Continuous Integration & Continuous Delivery**: Streamlining deployment and maintaining code integrity through a CI/CD pipeline.
 
-**Recharts:** 
-Data visualization is powered by Recharts, enabling the creation of insightful scatterplots and engaging pie charts.
+- **Atatus**: Effective monitoring of performance to ensure optimal user experiences.
 
-**Effective Version Control with Git & GitHub:** 
-The app's codebase is securely hosted on GitHub, allowing collaborative development and ensuring version control. This fosters a cohesive and organized development process.  
+- **Recharts**: Empowering data visualization with insightful scatterplots and engaging pie charts.
 
-# Key Features 
+- **Git & GitHub**: Secure version control and collaborative development hosted on GitHub.
 
-## Feature 1: Filter Events by City
+## Key Features
 
-### User Story
-As a user,  
-I should be able to to filter events by city  
-So that I can see the list of events that take place in that city.  
+### Feature 1: Filter Events by City
 
-### Scenarios using the Gherkin (“Given-When-Then”) syntax
+**User Story**
 
-**Scenario 1: When user hasn’t searched for a specific city, show upcoming events from all cities**  
-**Given** user hasn’t searched for any city **When** the user opens the app **Then** the user should see a list of all upcoming events
+As a user, I want to filter events by city to see a list of events in that specific location.
 
-**Scenario 2: User should see a list of suggestions when they search for a city**  
-**Given** the main page is open **When** user starts typing in the city textbox **Then** the user should see a list of cities (suggestions) that match what they’ve typed
+**Scenarios**
 
-**Scenario 3: User can select a city from the suggested list**  
-**Given** the user was typing “Berlin” in the city textbox And the list of suggested cities is showing **When** the user selects a city (e.g., “Berlin, Germany”) from the list **Then** their city should be changed to that city (i.e., “Berlin, Germany”) AND the list of suggestions should disappear AND the user should receive a list of upcoming events in that city
+1. When the user hasn’t searched for a specific city, the app should show a list of all upcoming events.
+2. The user should see a list of suggestions when they search for a city.
+3. The user can select a city from the suggested list.
 
+### Feature 2: Show/Hide Event Details
 
-## Feature 2: Show/Hide Event Details
+**User Story**
 
-### User Story
-As a user,  
-I should be able to show/hide event details  
-So that I can see more/less information about an event.  
+As a user, I want to show/hide event details to see more or less information about an event.
 
-### Scenarios using the Gherkin (“Given-When-Then”) syntax
+**Scenarios**
 
-**Scenario 1: An event element is collapsed by default**  
-**Given** the user didn't click on event details **When** the user clicks on the “Show details“ button **Then**the details of the clicked event should be seen
+1. An event element is collapsed by default.
+2. The user can expand an event to see its details.
+3. The user can collapse an event to hide its details.
 
-**Scenario 2: User can expand an event to see its details**  
-**Given** the main page is open **When** I click on another event **Then** the details of the previous event should be hidden, and the details of the new event should be displayed  
+### Feature 3: Specify Number of Events
 
-**Scenraio 3: The user can collapse an event to hide its details**  
-**Given** the user used the “Show details“ button **When** the user click on the “Hide details“ button **Then**  the event's details should be hidden again
+**User Story**
 
+As a user, I want to specify the number of events I want to view in the app to see more or fewer events in the events list at once.
 
-## Feature 3: Specify Number of Events
+**Scenarios**
 
-### User Story
-As a user,  
-I should be able to specify the number of events I want to view in the app  
-So that I can see more or fewer events in the events list at once.  
+1. When the user hasn’t specified a number, 32 is the default.
+2. The user can change the number of events they want to see.
 
-### Scenarios using the Gherkin (“Given-When-Then”) syntax
+### Feature 4: Use the App When Offline
 
-**Scenario 1: When user hasn’t specified a number, 32 is the default number**  
-**Given** the main page is open **When** the user doesn't specify the number of events visible **Then** the default number will be 32
+**User Story**
 
-**Scenario 2: User can change the number of events they want to see**  
-**Given** the main page is open **When** the user specifies the number of events visible **Then** the user should be able to see events equal to the given number at once
+As a user, I want to use the app when offline to view events I previously accessed online.
 
-## Feature 4: Use the App When Offline.
+**Scenarios**
 
-### User Story
-As a user,  
-I should be able to use the app when offline  
-So that I can see the events I viewed the last time I was online.  
+1. View previously accessed events offline.
+2. View event details offline.
+3. Refresh event data when online.
 
-### Scenarios using the Gherkin (“Given-When-Then”) syntax
+### Feature 5: Add an App Shortcut to the Home Screen
 
-**Scenario 1: View Previously Accessed Events Offline**  
-**Given** the user has accessed the app and viewed events while online **When** he's offline and opens the app **Then** the app should display the previously accessed events that he viewed when he was last online
+**User Story**
 
-**Scenario 2: View Event Details Offline**  
-**Given** the user has accessed the details of an event while online **When** he's offline and selects the event from the list **Then** the app should display the previously accessed event details, even when offline
+As a user, I want to add an app shortcut to my home screen to open the app faster.
 
-**Scenario 3: Refresh Event Data when Online**  
-**Given** the user has used the app offline and viewed events **When** he goes back online and opens the app **Then** the app should automatically refresh the event data and update it with any changes or new events since he was last online
+**Scenarios**
 
-## Feature 5: Add an App Shortcut to the Home Screen
+1. Add app shortcut to home screen.
+2. Open the app via home screen shortcut.
+3. Remove app shortcut from home screen.
 
-### User Story
-As a user,  
-I should be able to add the app shortcut to my home screen  
-So that I can open the app faster.  
+### Feature 6: Display Charts Visualizing Event Details
 
-### Scenarios using the Gherkin (“Given-When-Then”) syntax
+**User Story**
 
-**Scenario 1: Add App Shortcut to Home Screen**  
-**Given** the user is on the app's main screen **When** he navigates to the settings or options menu AND selects "Add to Home Screen" **Then** the app shortcut should be created and added to his device's home screen
+As a user, I want to see a chart showing the upcoming events in each city to know what events are organized in which city.
 
-**Scenario 2: Open App via Home Screen Shortcut**  
-**Given** the user has previously added the app shortcut to his device's home screen **When** he taps on the app shortcut **Then** the app should launch immediately, providing faster access
+**Scenarios**
 
-**Scenario 3: Remove App Shortcut from Home Screen**  
-**Given** the user has the app shortcut on his device's home screen **When** he navigates to the settings or options menu AND he selects "Remove from Home Screen" **Then** the app shortcut should be removed from his device's home screen
+1. Show a chart with the number of upcoming events in each city.
 
-## Feature 6: Display Charts Visualizing Event Details
+## Installation and Usage
 
-### User Story
-As a user,  
-I should be able to see a chart showing the upcoming events in each city  
-So that I know what events are organized in which city.  
+To set up and use the Meet App, follow these steps:
 
-### Scenarios using the Gherkin (“Given-When-Then”) syntax
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install the required dependencies using `npm install`.
 
-**Scenario 1: Show a chart with the number of upcoming events in each city**  
-**Given** the user has not selected a city **When** the user wants to compare events between cities **Then** they should be able to access a chart with the number of upcoming events in each city
+Now you're ready to run the app:
 
+4. Set up a MongoDB database and configure the connection string in `config.js`.
+5. Start the server using `npm start`.
+6. Access the API endpoints using a REST client or a web browser.
 
+Feel free to explore the app's features and interact with it.
+
+## Contribution
+
+Contributions to this project are welcome. You can contribute by submitting pull requests, reporting issues, or improving the codebase. Please follow the established contribution guidelines.
+
+## License
+
+This project is licensed under the MIT License.
+
+Customize this README with any additional project-specific information as needed.
 
 
