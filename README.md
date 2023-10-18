@@ -4,6 +4,9 @@
 
 Meet App is a serverless, progressive web application (PWA) developed using React, utilizing test-driven development (TDD) techniques. It leverages the Google Calendar API to fetch upcoming events and is hosted on Amazon Web Services (AWS) using a serverless architecture.
 
+<img width="1508" alt="meet-app" src="https://github.com/MiraKarate/meet/assets/124045048/2f1274b3-7566-46b7-b3db-7652e0dd18b8">
+
+
 ## Technologies & Tools Used
 
 Meet App integrates various innovative technologies and tools, including:
@@ -26,7 +29,6 @@ Meet App integrates various innovative technologies and tools, including:
 
 - **Git & GitHub**: Secure version control and collaborative development hosted on GitHub.
 
-<img width="1508" alt="meet-app" src="https://github.com/MiraKarate/meet/assets/124045048/2f1274b3-7566-46b7-b3db-7652e0dd18b8">
 
 
 ## Key Features
